@@ -3,10 +3,7 @@ import ReactApexChart from "react-apexcharts";
 
 
 function Graph(){
-  let x=0;
-  let y=15;
-
-
+  
         var arr=[{
           x: 0,
           y: 15
@@ -25,19 +22,29 @@ function Graph(){
   const submit=()=>{
     let x=parseInt(document.getElementById('length').value);
     let y=parseInt(document.getElementById('height').value);
-    let h = 32-y;
-    let l = 5+x;
+    let cy; let cx; let ex;
+    if(x<8 && y<8){
+      cy = 15; ex = 30; cx = 12;
+    }
+    else if(x<8 && y>=8 ){
+     cy = 30; ex = 30; cx = 12;
+    }
+    else{
+      cy = 32; cx = 5; ex = 40;
+    }
+    let h = cy-y; 
+    let l = cx+x;
     arr=[{
       x: 0,
-      y: 32
+      y: cy
   },{
-      x: 5,
-      y: 32
+      x: cx,
+      y: cy
   }, {
       x: l,
       y: h
   },{
-    x: 40,
+    x: ex,
     y: h
 },
 ];
@@ -150,7 +157,7 @@ function Graph(){
         />
         <div className="container" style={{fontSize:"12px"}}>
         <div className="mx-auto col-10 col-md-8 col-lg-6">
-        <h1 style={{fontFamily: "'Merriweather Sans', sans-serif"}}>Slope Properties</h1>
+        <h1 style={{fontSize:"30px", fontFamily: "'Bruno Ace SC', cursive"}}>Slope Properties</h1>
         <br />
         <div class="input-group mb-3 w-50 ">
         <span class="input-group-text" id="basic-addon1">Height</span>
