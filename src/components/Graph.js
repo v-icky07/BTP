@@ -171,19 +171,19 @@ function Graph() {
             <h1 style={{ fontSize: "30px", fontFamily: "'Bruno Ace SC', cursive" }}>Slope Properties</h1>
             <br />
             <div className="input-group mb-3 w-50 ">
-              <span className="input-group-text" id="basic-addon1">Height</span>
+              <span className="input-group-text" id="basic-addon1">Height(m)</span>
               <input type="number" className="form-control" id="height" aria-label="Height" aria-describedby="basic-addon1" />
             </div>
             <div className="input-group mb-3 w-50">
-              <span className="input-group-text" id="basic-addon1">Length</span>
+              <span className="input-group-text" id="basic-addon1">Length(m)</span>
               <input type="number" className="form-control" id="length" aria-label="length" aria-describedby="basic-addon1" />
             </div>
             <div className="input-group mb-3 w-50 ">
-              <span className="input-group-text" id="basic-addon1">Cohesion</span>
+              <span className="input-group-text" id="basic-addon1">Cohesion(kPa)</span>
               <input type="number" className="form-control" id="cohesion" aria-label="cohesion" aria-describedby="basic-addon1" />
             </div>
             <div className="input-group mb-3 w-50 ">
-              <span className="input-group-text" id="basic-addon1">Slice Width</span>
+              <span className="input-group-text" id="basic-addon1">Slice Width(m)</span>
               <input type="number" className="form-control" id="width" aria-label="width" aria-describedby="basic-addon1" />
             </div>
             <button type="button" className="btn btn-primary" onClick={submit}>Analyse</button>
